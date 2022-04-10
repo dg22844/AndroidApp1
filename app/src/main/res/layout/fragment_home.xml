@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/childs_nrewards"
+        android:textSize="@dimen/textSize_h2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="0">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="@dimen/textSize_h5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/circle"
+                    app:layout_constraintBottom_toTopOf="@+id/textView"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineTop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineBottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="vertical" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="vertical" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clipToOutline="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/avatar_cat"
+
+                        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+                        app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textViewBehaviourPointCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+5"
+                        android:textSize="@dimen/textSize_h5" />
+
+                    <TextView
+                        android:id="@+id/textViewDutyPointCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+10"
+                        android:textSize="@dimen/textSize_h5" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="@dimen/textSize_h5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@+id/textView1"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineTop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.2"
+                android:orientation="horizontal" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineBottom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.8"
+                android:orientation="horizontal" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.2"
+                android:orientation="vertical" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.8"
+                android:orientation="vertical" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToOutline="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/avatar_cat"
+
+                app:layout_constraintBottom_toTopOf="@+id/guidelineBottom1"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd1"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart1"
+                app:layout_constraintTop_toTopOf="@+id/guidelineTop1"
+                app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/textView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewBehaviourPointCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="@dimen/textSize_h5" />
+
+            <TextView
+                android:id="@+id/textViewDutyPointCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+10"
+                android:textSize="@dimen/textSize_h5" />
+            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="1">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="@dimen/textSize_h5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/circle"
+                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineTop2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineBottom2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="vertical" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="vertical" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clipToOutline="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/avatar_cat"
+
+                        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom2"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd2"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart2"
+                        app:layout_constraintTop_toTopOf="@+id/guidelineTop2"
+                        app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textViewBehaviourPointCard3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+5"
+                        android:textSize="@dimen/textSize_h5" />
+
+                    <TextView
+                        android:id="@+id/textViewDutyPointCard3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+10"
+                        android:textSize="@dimen/textSize_h5" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="@dimen/textSize_h5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/circle"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineTop4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineBottom4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="horizontal" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.2"
+                        android:orientation="vertical" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.8"
+                        android:orientation="vertical" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clipToOutline="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/avatar_cat"
+
+                        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom4"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd4"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart4"
+                        app:layout_constraintTop_toTopOf="@+id/guidelineTop4"
+                        app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textViewBehaviourPointCard4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+5"
+                        android:textSize="@dimen/textSize_h5" />
+
+                    <TextView
+                        android:id="@+id/textViewDutyPointCard4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+10"
+                        android:textSize="@dimen/textSize_h5" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
